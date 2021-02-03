@@ -12,7 +12,8 @@
 
 <p>
   <strong>Latest micropost:</strong>
-  <%= @user.microposts.first.content %>
+  <% latest_micropost = @user.microposts.first %>
+  <%= latest_micropost.content if latest_micropost %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
